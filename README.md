@@ -25,8 +25,11 @@ heroku start / stop / restart
 
 ###환경변수
 
-
-
+const host = process.env.DB_HOST||conf.host;
+const user = process.env.DB_USER||conf.user;
+const pw = process.env.DB_PW;
+const dbname = process.env.DB_NAME;
+heroku config:set DB_NAME=dbname
  
 
 ## 새로 연결
