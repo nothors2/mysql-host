@@ -2,3 +2,4 @@ node_modules
 uploadedFiles
 /database.json
 /database*.json
+database.json
