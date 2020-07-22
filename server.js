@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 
+const host = process.env.DB_HOST||conf.host;
+const user = process.env.DB_USER||conf.user;
+const pw = process.env.DB_PW;
+const dbname = process.env.DB_NAME;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
@@ -12,11 +17,11 @@ const conf = JSON.parse(data);
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host: conf.host,
-    user: conf.user,
-    password: "james123",
+    host: host,
+    user: user,
+    password: pw,
     port: conf.port,
-    database: conf.database
+    database: dbname
 });
 connection.connect();
  
