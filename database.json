@@ -1,0 +1,8 @@
+{
+  "host":"34.64.104.100",
+  "user":"root",
+  "password":"",
+  "port":"3306", 
+  "database":"demo"
+
+}
